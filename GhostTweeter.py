@@ -1,27 +1,28 @@
-import feedparser
+import feedparser, datetime, tweepy, random, time
 import datetime
 from datetime import date
 import tweepy
 import random
 import time
 
-#Array containing list of post
+# Array containing list of post
 posts = []
 
-#Needed to cycle through individual posts
+# Needed to cycle through individual posts
 post = 0
 
-#Get the time between tweets in hours
+# Get the time between tweets in hours
 timeBetweenTweets = float(raw_input("Hours between tweets?: "))
 
-#Filters tweets based off of age
+# Filters tweets based off of age
 minPostAge = float(raw_input("Minimum age of blog post (in days, 0 = all posts)?: "))
 
-#Get the blog url
+# Get the blog url
 blog = raw_input("What is your blog url? (ex: http://www.adventuresintechland.com): ")
 
+
 def getPosts():
-    #Start page (.../rss/1)
+    # Start page (.../rss/1)
     page = 1
 
     while 1:
@@ -46,7 +47,7 @@ def getPosts():
 
             today = str(datetime.date.today()).split("-")
 
-            dayssince = date(int(today[0]),int(today[1]),int(today[2])) - date(year,month,day)
+            dayssince = date(int(today[0]), int(today[1]), int(today[2])) - date(year, month, day)
             dayssince = str(dayssince).split(" ")
             dayssince = dayssince[0]
 
@@ -62,7 +63,7 @@ def getPosts():
         else:
             break
 
-#Twitter Auth
+# Twitter Auth
 CONSUMER_KEY = 'yourshere'
 CONSUMER_SECRET = 'yourshere'
 ACCESS_KEY = 'yourshere'
@@ -71,9 +72,9 @@ auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
 api = tweepy.API(auth)
 
-#Gets the tweet ready and checks if it is older than the set age
+# Gets the tweet ready and checks if it is older than the set age
 def postTweet():
-    randomint = random.randint(0,len(posts) - 1)
+    randomint = random.randint(0, len(posts) - 1)
     selected_tweet = posts[randomint]
     if float(selected_tweet[1]) < minPostAge:
         postTweet()
@@ -82,8 +83,7 @@ def postTweet():
         print "Attempting to post: " + single_tweet
         api.update_status(status=single_tweet)
 
-
-#Will run forever, checking for new blog post before every tweet is posted
+# Will run forever, checking for new blog post before every tweet is posted
 while 1:
     getPosts()
     postTweet()
