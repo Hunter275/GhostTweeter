@@ -1,5 +1,5 @@
 # GhostTweeter
-Tweets out a random link to one of your Ghost blog post. You must edit this code and enter in your own account authentication (see below).
+Tweets out a random link to one of your Ghost blog post. 
 
 Tweets are sent in the following format:
 
@@ -7,6 +7,8 @@ Tweets are sent in the following format:
 
 Converts every tag into a hashtag (as long as characters are not >140)
 
+
+You must edit this code and enter in your own account authentication (see below).
 
 Getting your authentication:
 
