@@ -1,5 +1,5 @@
 # GhostTweeter
-Tweets out a random link to one of your Ghost blog post. 
+**Periodically tweets out a random link to one of your Ghost blog post.**
 
 Tweets are sent in the following format:
 
@@ -14,4 +14,4 @@ Getting your authentication:
 
 1. Go to https://apps.twitter.com/app/new and create a new app
 2. Once created, copy and paste your API key and secret (will be under "Keys and Access Tokens")
-3. Create a access token, copy and paste those as well
+3. Create an access token, copy and paste those as well
