@@ -8,7 +8,7 @@ Tweets are sent in the following format:
 Converts every tag into a hashtag (as long as characters are not >140)
 
 
-You must edit this code and enter in your own account authentication (see below).
+*You must edit this code and enter in your own account authentication (see below).*
 
 Getting your authentication:
 
