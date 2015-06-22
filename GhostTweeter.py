@@ -1,4 +1,4 @@
-import feedparser, datetime, tweepy, random, time
+import feedparser
 import datetime
 from datetime import date
 import tweepy
