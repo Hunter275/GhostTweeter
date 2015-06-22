@@ -3,7 +3,7 @@
 
 Tweets are sent in the following format:
 ```
-&lt;post title>: &lt;url> #&lt;tag1> #&lt;tag2>
+<post title>: <url> #<tag1> #<tag2>
 ```
 Converts every tag into a hashtag (as long as characters are not >140)
 
