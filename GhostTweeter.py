@@ -17,12 +17,15 @@ timeBetweenTweets = float(raw_input("Hours between tweets?: "))
 #Filters tweets based off of age
 minPostAge = float(raw_input("Minimum age of blog post (in days, 0 = all posts)?: "))
 
+#Get the blog url
+blog = raw_input("What is your blog url? (ex: http://www.adventuresintechland.com): ")
+
 def getPosts():
     #Start page (.../rss/1)
     page = 1
 
     while 1:
-        feed = feedparser.parse('http://adventuresintechland.com/rss/' + str(page))
+        feed = feedparser.parse(blog + '/rss/' + str(page))
         post = 0
         for item in feed['entries']:
             title = feed['entries'][post]['title']
