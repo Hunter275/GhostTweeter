@@ -1,3 +1,6 @@
+# GhostTweeter.py by Hunter Thornsberry (http://www.adventuresintechaland.com)
+# Documentation and help at: http://adventuresintechland.com/ghost-tweeter/
+
 import feedparser
 import datetime
 from datetime import date
