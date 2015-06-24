@@ -15,3 +15,5 @@ Getting your authentication:
 1. Go to https://apps.twitter.com/app/new and create a new app
 2. Once created, copy and paste your API key and secret (will be under "Keys and Access Tokens")
 3. Create an access token, copy and paste those as well
+
+This Python code requires [tweepy](https://github.com/tweepy/tweepy) and [feedparser](https://github.com/kurtmckee/feedparser) to run.
